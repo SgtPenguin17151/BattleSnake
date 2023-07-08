@@ -11,9 +11,10 @@ python tests.py -v
 """
 import unittest,time
 
-import RouteFinder
-import moveLogic,Board,paranoid
-
+import ../../RouteFinder
+import ../../Board
+import ../../paranoid
+import ../../moveLogic
 
 class moveLogicTestCases(unittest.TestCase):
 
