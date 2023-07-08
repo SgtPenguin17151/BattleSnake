@@ -709,7 +709,6 @@ class paranoidTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{"x": 8, "y": 0}, {"x": 6, "y": 1}, {"x": 1, "y": 1}, {"x": 3, "y": 9}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
 
         pinf = float('inf')
@@ -758,7 +757,6 @@ class paranoidTestCases(unittest.TestCase):
                             {'x': 9, 'y': 5}, {'x': 8, 'y': 5}], 'head': {'x': 8, 'y': 9}, 'length': 3, 'shout': '',
                    'squad': '', 'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{"x": 0, "y": 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
 
         pinf = float('inf')
@@ -805,7 +803,6 @@ class paranoidTestCases(unittest.TestCase):
                    'shout': '',
                    'squad': '', 'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{"x": 3, "y": 7}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
 
         pinf = float('inf')
@@ -855,7 +852,6 @@ class paranoidTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{"x": 3, "y": 7}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
 
         pinf = float('inf')
@@ -900,7 +896,6 @@ class paranoidTestCases(unittest.TestCase):
                             {'x': 9, 'y': 7}], 'head': {'x': 10, 'y': 10}, 'length': 5, 'shout': '', 'squad': '',
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{"x": 8, "y": 0}, {"x": 6, "y": 1}, {"x": 1, "y": 1}, {"x": 3, "y": 9}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
 
         pinf = float('inf')
@@ -943,7 +938,6 @@ class paranoidTestCases(unittest.TestCase):
                    'length': 3, 'shout': '', 'squad': '',
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{"x": 8, "y": 0}, {"x": 6, "y": 1}, {"x": 1, "y": 1}, {"x": 3, "y": 9}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
 
         pinf = float('inf')
@@ -990,7 +984,6 @@ class paranoidTestCases(unittest.TestCase):
        'length': 5, 'shout': '', 'squad': '',
        'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{"x": 8, "y": 0},{"x": 6, "y": 1},{"x": 1, "y": 1},{"x": 3, "y": 9}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
 
         pinf = float('inf')
@@ -1033,7 +1026,6 @@ class routeFinderTestCases(unittest.TestCase):
                    'body': [{'x': 0, 'y': 9}, {'x': 0, 'y': 8}, {'x': 0, 'y': 7}],
                    'head': {'x': 0, 'y': 9}, 'length': 3, 'shout': '', 'squad': '',
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, [], 11)
 
         possible_moves = moveLogic.generateMoves(board,my_snake,snakes)
@@ -1068,7 +1060,6 @@ class routeFinderTestCases(unittest.TestCase):
                    'body': [{'x': 0, 'y': 9}, {'x': 0, 'y': 8}, {'x': 0, 'y': 7}],
                    'head': {'x': 0, 'y': 9}, 'length': 3, 'shout': '', 'squad': '',
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, [], 11)
 
         possible_moves = moveLogic.generateMoves(board,my_snake,snakes)
@@ -1104,7 +1095,6 @@ class routeFinderTestCases(unittest.TestCase):
                    'head': {'x': 0, 'y': 9}, 'length': 3, 'shout': '', 'squad': '',
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{'x':5,'y':5},{'x':10,'y':2}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
 
         closestFood,distance = RouteFinder.findClosestFood(food,my_snake["head"])
@@ -1145,7 +1135,6 @@ class routeFinderTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5},{'x':10,'y':2}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         snakeHeads = [snakes[1]["head"],snakes[2]["head"]]
         closestFood,distance = RouteFinder.findClosestFood(snakeHeads,my_snake["head"])
@@ -1182,7 +1171,6 @@ class routeFinderTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5},{'x':10,'y':2}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         snakeHeads = [snakes[1]["head"]]
         closestFood,distance = RouteFinder.findClosestFood(snakeHeads,my_snake["head"])
@@ -1194,7 +1182,6 @@ class boardClassTestCases(unittest.TestCase):
     def test_initaliseBoard11x11(self):
         Board.resetGameBoard()
         Board.resetFood()
-        Board.initialiseBoard(11,11)
         board = [
             ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
             ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
@@ -1211,26 +1198,9 @@ class boardClassTestCases(unittest.TestCase):
         self.assertEqual(Board.getHeight(),11)
         self.assertEqual(Board.getWidth(),11)
 
-    def test_initaliseBoard7x7(self):
-        Board.resetGameBoard()
-        Board.resetFood()
-        Board.initialiseBoard(7,7)
-        board = [
-            ['x', 'x', 'x', 'x', 'x', 'x', 'x'],
-            ['x', 'x', 'x', 'x', 'x', 'x', 'x'],
-            ['x', 'x', 'x', 'x', 'x', 'x', 'x'],
-            ['x', 'x', 'x', 'x', 'x', 'x', 'x'],
-            ['x', 'x', 'x', 'x', 'x', 'x', 'x'],
-            ['x', 'x', 'x', 'x', 'x', 'x', 'x'],
-            ['x', 'x', 'x', 'x', 'x', 'x', 'x']]
-        self.assertEqual(Board.getBoard(), board)
-        self.assertEqual(Board.getHeight(), 7)
-        self.assertEqual(Board.getWidth(), 7)
-
     def test_fillGameBoard11x11(self):
         Board.resetGameBoard()
         Board.resetFood()
-        Board.initialiseBoard(11, 11)
         board = [
             ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'sb', 'sb'],
             ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'sb', 'sb'],
@@ -1248,27 +1218,6 @@ class boardClassTestCases(unittest.TestCase):
         Board.fillGameBoard(snakes,food,Board.getHeight())
         self.assertEqual(Board.getBoard(),board)
         self.assertEqual(Board.getBoard()[9][10],"f")
-
-    def test_fillGameBoard7x7(self):
-        Board.resetGameBoard()
-        Board.resetFood()
-        Board.initialiseBoard(7,7)
-        board = [
-            ['x', 'x', 'x', 'x', 'x', 'x', 'x'],
-            ['x', 'sh', 'x', 'x', 'x', 'x', 'x'],
-            ['x', 'sb', 'st', 'x', 'x', 'x', 'x'],
-            ['x', 'x', 'x', 'x', 'x', 'x', 'x'],
-            ['x', 'x', 'x', 'x', 'x', 'x', 'x'],
-            ['x', 'x', 'f', 'x', 'x', 'x', 'x'],
-            ['x', 'x', 'x', 'x', 'x', 'x', 'x']]
-        snakes = [{'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 67,
-                   'body': [{'x': 1, 'y': 5}, {'x': 1, 'y': 4}, {'x': 2, 'y': 4}, ],
-                   'head': {'x': 1, 'y': 5}, 'length': 3, 'shout': '', 'squad': '',
-                   'customizations': {'color': '#800080', 'head': 'safe', 'tail': 'small-rattle'}}]
-        food = [{'x': 2, 'y': 1}]
-        Board.fillGameBoard(snakes,food,Board.getHeight())
-        self.assertEqual(Board.getBoard(), board)
-        self.assertEqual(Board.getBoard()[5][2], "f")
 
     def test_getNumberOfFreeSquares(self):
         Board.resetGameBoard()
@@ -2442,7 +2391,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("right",my_snake,board,0,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -2511,7 +2459,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5},{'x':3,'y':9}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("right",my_snake,board,0,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -2580,7 +2527,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("up",my_snake,board,0,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -2649,7 +2595,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5},{'x':2,'y':10}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("up",my_snake,board,0,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -2718,7 +2663,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("left",my_snake,board,0,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -2787,7 +2731,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5},{'x':1,'y':10}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("left",my_snake,board,0,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -2856,7 +2799,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("down",my_snake,board,0,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -2925,7 +2867,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5},{'x':2,'y':8}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("down",my_snake,board,0,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -2991,7 +2932,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("none",my_snake,board,1,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -3057,7 +2997,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("left",my_snake,board,0,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -3123,7 +3062,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("left",my_snake,board,0,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -3186,7 +3124,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("left",my_snake,board,0,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -3252,7 +3189,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x':5,'y':5}]
-        Board.initialiseBoard(11,11)
         Board.fillGameBoard(snakes,food,11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("right",my_snake,board,0,snakes)
         self.assertEqual(correctBoard,newBoard)
@@ -3318,7 +3254,6 @@ class boardClassTestCases(unittest.TestCase):
                           'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x': 5, 'y': 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("right", my_snake, board, 0, snakes)
         self.assertEqual(correctBoard, newBoard)
@@ -3381,7 +3316,6 @@ class boardClassTestCases(unittest.TestCase):
                           'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x': 5, 'y': 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("right", my_snake, board, 0, snakes)
         self.assertEqual(correctBoard, newBoard)
@@ -3447,7 +3381,6 @@ class boardClassTestCases(unittest.TestCase):
                           'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x': 5, 'y': 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("up", my_snake, board, 0, snakes)
         self.assertEqual(correctBoard, newBoard)
@@ -3513,7 +3446,6 @@ class boardClassTestCases(unittest.TestCase):
                           'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x': 5, 'y': 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("up", my_snake, board, 0, snakes)
         self.assertEqual(correctBoard, newBoard)
@@ -3576,7 +3508,6 @@ class boardClassTestCases(unittest.TestCase):
                           'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x': 5, 'y': 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("up", my_snake, board, 0, snakes)
         self.assertEqual(correctBoard, newBoard)
@@ -3642,7 +3573,6 @@ class boardClassTestCases(unittest.TestCase):
                           'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x': 5, 'y': 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("down", my_snake, board, 0, snakes)
         self.assertEqual(correctBoard, newBoard)
@@ -3708,7 +3638,6 @@ class boardClassTestCases(unittest.TestCase):
                           'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x': 5, 'y': 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("down", my_snake, board, 0, snakes)
         self.assertEqual(correctBoard, newBoard)
@@ -3771,7 +3700,6 @@ class boardClassTestCases(unittest.TestCase):
                           'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x': 5, 'y': 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("down", my_snake, board, 0, snakes)
         self.assertEqual(correctBoard, newBoard)
@@ -3829,7 +3757,6 @@ class boardClassTestCases(unittest.TestCase):
                           'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x': 5, 'y': 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("right", my_snake, board, 0, snakes)
         self.assertEqual(correctBoard, newBoard)
@@ -3887,7 +3814,6 @@ class boardClassTestCases(unittest.TestCase):
                           'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x': 5, 'y': 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("left", my_snake, board, 0, snakes)
         self.assertEqual(correctBoard, newBoard)
@@ -3945,7 +3871,6 @@ class boardClassTestCases(unittest.TestCase):
                           'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x': 5, 'y': 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("up", my_snake, board, 0, snakes)
         self.assertEqual(correctBoard, newBoard)
@@ -4003,7 +3928,6 @@ class boardClassTestCases(unittest.TestCase):
                           'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
 
         food = [{'x': 5, 'y': 5}]
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         newBoard, newSnakes, survived, isPlayerDead, deadIndexs = Board.doMove("down", my_snake, board, 0, snakes)
         self.assertEqual(correctBoard, newBoard)
@@ -4050,7 +3974,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{'x': 5, 'y': 5}]
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         my_snake = {'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 1,
                     'body': [{'x': 3, 'y': 8},{'x': 2, 'y': 8}, {'x': 2, 'y': 7}, {'x': 2, 'y': 6}],
@@ -4098,7 +4021,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{'x': 5, 'y': 5}]
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         my_snake = {'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 1,
                     'body': [{'x': 3, 'y': 8},{'x': 2, 'y': 8}, {'x': 2, 'y': 7}, {'x': 2, 'y': 6}],
@@ -4154,7 +4076,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{'x': 5, 'y': 5}]
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         my_snake = {'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 1,
                     'body': [{'x': 3, 'y': 8},{'x': 2, 'y': 8}, {'x': 2, 'y': 7}, {'x': 2, 'y': 6}],
@@ -4194,7 +4115,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{'x': 5, 'y': 5}]
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         my_snake = {'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 1,
                     'body': [{'x': 3, 'y': 8}, {'x': 2, 'y': 8}, {'x': 2, 'y': 7}, {'x': 2, 'y': 6}],
@@ -4236,7 +4156,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{'x': 5, 'y': 5}]
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         my_snake = {'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 1,
                     'body': [{'x': 3, 'y': 8}, {'x': 2, 'y': 8}, {'x': 2, 'y': 7}, {'x': 2, 'y': 6}],
@@ -4280,7 +4199,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = []
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         my_snake = {'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 1,
                     'body': [{'x': 3, 'y': 8}, {'x': 2, 'y': 8}, {'x': 2, 'y': 7}, {'x': 2, 'y': 6}],
@@ -4325,7 +4243,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = []
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         my_snake = {'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 1,
                     'body': [{'x': 3, 'y': 8}, {'x': 2, 'y': 8}, {'x': 2, 'y': 7}, {'x': 2, 'y': 6}],
@@ -4369,7 +4286,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{'x': 3, 'y': 0}]
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         my_snake = {'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 100,
                     'body': [{'x': 3, 'y': 8}, {'x': 2, 'y': 8}, {'x': 2, 'y': 7}, {'x': 2, 'y': 6}],
@@ -4410,7 +4326,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{'x': 3, 'y': 0}]
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         my_snake = {'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 100,
                    'body': [{'x': 4, 'y': 10}, {'x': 4, 'y': 9}, {'x': 3, 'y': 9}, {'x': 3, 'y': 10}, {'x': 2, 'y': 10}],
@@ -4452,7 +4367,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{'x': 3, 'y': 0}]
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         my_snake = {'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 100,
                    'body': [{'x': 4, 'y': 10}, {'x': 4, 'y': 9}, {'x': 3, 'y': 9}, {'x': 3, 'y': 10}, {'x': 2, 'y': 10}],
@@ -4488,7 +4402,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{'x': 3, 'y': 0},{'x':5, 'y': 4}]
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         my_snake = {'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 100,
                    'body': [{'x': 5, 'y': 5}, {'x': 5, 'y': 6,}, {'x': 4, 'y': 6}, {'x': 4, 'y': 5}],
@@ -4532,7 +4445,6 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{'x': 3, 'y': 0},{'x':5, 'y': 4}]
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         my_snake = {'id': 'gs_6cKMCg9r6jP77WV6bbjqrFfX', 'name': 'ekans v1', 'latency': '147', 'health': 100,
                    'body': [{'x': 0, 'y': 10}, {'x': 0, 'y': 9,}, {'x': 0, 'y': 8}],
@@ -4576,13 +4488,32 @@ class boardClassTestCases(unittest.TestCase):
                    'customizations': {'color': '#fb6900', 'head': 'default', 'tail': 'default'}}]
         food = [{'x': 3, 'y': 0}, {'x': 5, 'y': 4}]
 
-        self.assertEqual(Board.getBoard(),[])
+        self.assertEqual(Board.getBoard(),[['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x']])
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         self.assertNotEqual(Board.getBoard(),[])
         Board.resetGameBoard()
-        self.assertEqual(Board.getBoard(),[])
+        self.assertEqual(Board.getBoard(),[['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+               ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x']])
 
     def test_resetFood(self):
         Board.resetGameBoard()
@@ -4620,7 +4551,6 @@ class boardClassTestCases(unittest.TestCase):
 
         self.assertEqual(Board.getFood(),[])
 
-        Board.initialiseBoard(11, 11)
         Board.fillGameBoard(snakes, food, 11)
         self.assertNotEqual(Board.getFood(),[])
         Board.resetFood()
