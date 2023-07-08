@@ -12,11 +12,6 @@ def choose_move(data: dict) -> str:
   food = data["board"]["food"]
   my_head = data["you"]["head"]
 
-  for snake in snakes:
-    if snake["id"] == data["you"]["id"]:
-      mySnake = snake
-  print(data["you"] == mySnake)
-
   Board.fillGameBoard(snakes, food, height)
 
   possible_moves = ["up", "down", "left", "right"]
@@ -24,7 +19,7 @@ def choose_move(data: dict) -> str:
                                                 possible_moves)
   possible_moves = moveLogic.avoid_walls(my_head, width, height,
                                          possible_moves)
-  possible_moves = moveLogic.checkForHeadCollision(mySnake, snakes,
+  possible_moves = moveLogic.checkForHeadCollision(data["you"], snakes,
                                                    possible_moves,
                                                    Board.getBoard())
 
@@ -33,7 +28,7 @@ def choose_move(data: dict) -> str:
     if s["id"] == data["you"]["id"]:
       snakes.pop(index)
     index += 1
-  snakes.insert(0, mySnake)
+  snakes.insert(0, data["you"])
 
   pinf = float('inf')
   ninf = float('-inf')
@@ -49,7 +44,7 @@ def choose_move(data: dict) -> str:
       while (time.time() - start) < 0.38:
         result = (paranoid.paranoid(ninf, pinf, depth, "Max", boardCopy,
                                     boardCopy, snakes, snakes, "initial",
-                                    mySnake))
+                                    data["you"]))
         if (time.time() - start) < 0.4:
           bestMove = result[1]
           moveLogic.stateMap[str(boardCopy)] = bestMove
