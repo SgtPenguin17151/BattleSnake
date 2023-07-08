@@ -10,4 +10,5 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: run tests.py
-      run: python ../../tests.py
+      working-directory: ./
+      run: python tests.py
