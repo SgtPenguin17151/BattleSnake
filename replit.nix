@@ -1,5 +1,6 @@
 { pkgs }: {
   deps = [
+    pkgs.sudo
     pkgs.python38Full
     pkgs.replitPackages.prybar-python3
   ];
