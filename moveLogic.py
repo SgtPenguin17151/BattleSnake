@@ -1,7 +1,5 @@
 import Board
 
-stateMap = {}
-
 def avoid_self(my_head,snakes,possible_moves,index):
   currentSnake = snakes[index]
   if currentSnake["body"][1]['x'] == my_head["x"] + 1 and my_head["y"] == currentSnake['body'][1]["y"] and "right" in possible_moves:
@@ -79,15 +77,8 @@ def checkForHeadCollision(my_snake,snakes,possible_moves,board):
 
 
 def generateMoves(board,snake,enemies):
-  global stateMap
   moves = ["left","up","down","right"]
   moves = avoid_other_snakes(snake["head"],enemies,moves)
   moves = avoid_walls(snake["head"],Board.getWidth(),Board.getHeight(),moves)
   moves = checkForHeadCollision(snake,enemies,moves,board)
-  if str(board) in stateMap:
-      bestMove = stateMap[str(board)]
-      if bestMove in moves and len(moves) > 1:
-          moves.remove(bestMove)
-          moves[0] = bestMove
-
   return moves

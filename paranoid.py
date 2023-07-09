@@ -30,7 +30,7 @@ def paranoid(alpha, beta, depth, turn, oldBoard,currentBoard,oldSnakes,currentSn
       boardCopy = copy.deepcopy(currentBoard)
       newBoard,newSnakes,survived,isPlayerDead,deadIndex = Board.doMove(move,copyOfMe,boardCopy,0,currentSnakes)
       if survived:
-        v,newMove = paranoid(alpha,beta,depth-1,turn,oldBoard,newBoard,oldSnakes,newSnakes,move,newSnakes[0])
+        v,newMove = paranoid(alpha,beta,depth,turn,oldBoard,newBoard,oldSnakes,newSnakes,move,newSnakes[0])
         bestScore = max(bestScore,v)
         if bestScore == v:
           bestMove = move
@@ -100,7 +100,6 @@ def paranoid(alpha, beta, depth, turn, oldBoard,currentBoard,oldSnakes,currentSn
         return bestScore, prevMove
       if beta == bestScore:
         bestMove = newMove
-
 
   return bestScore,bestMove
 
