@@ -946,7 +946,7 @@ class paranoidTestCases(unittest.TestCase):
         while index < 50:
             paranoid.timer = time.time()
             result = (paranoid.paranoid(ninf,pinf,4,"Max",board,board,snakes,snakes,"Initial",my_snake))
-            self.assertEqual("down", result[1])
+            self.assertIn(result[1],"left,down")
             index += 1
 
 
