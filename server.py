@@ -37,6 +37,7 @@ def handle_start():
     request.json contains information about the game that's about to be played.
     """
     data = request.get_json()
+    server_logic.thinkingTime = 0.4
 
     print(f"{data['game']['id']} START")
     return "ok"
@@ -50,7 +51,15 @@ def handle_move():
     """
     data = request.get_json()
 
-    # TODO - look at the server_logic.py file to see how we decide what move to return!
+    if data["you"]["latency"] > 499:
+        server_logic.thinkingTime = server_logic.thinkingTime - 0.1
+    else:
+        server_logic.thinkingTime = server_logic.thinkingTime + ((data["you"]["latency"]/1000) - server_logic.thinkingTime)
+
+
+    server_logic.expectedLatency = data["you"]["latency"]
+        
+
     move = server_logic.choose_move(data)
 
     return {"move": move}

@@ -1,5 +1,6 @@
 import Board,moveLogic,copy,itertools,time
 timer = 0
+previousLatency = 0
 def paranoid(alpha, beta, depth, turn, oldBoard,currentBoard,oldSnakes,currentSnakes,prevMove,mySnake):
   bestMove = prevMove
 
@@ -13,7 +14,7 @@ def paranoid(alpha, beta, depth, turn, oldBoard,currentBoard,oldSnakes,currentSn
   #Is max turns
   if turn == "Max":
     bestScore = float("-inf")
-    if time.time() - timer > 0.38:
+    if time.time() - timer > 0.4:
       score = Board.evaluate(currentBoard,mySnake,currentSnakes)
       if score > bestScore:
         return(score,bestMove)
@@ -42,7 +43,7 @@ def paranoid(alpha, beta, depth, turn, oldBoard,currentBoard,oldSnakes,currentSn
   else:
     #is mins turn
     bestScore = float("inf")
-    if time.time() - timer > 0.38:
+    if time.time() - timer > 0.4:
       score = Board.evaluate(currentBoard,mySnake,currentSnakes)
       if score < bestScore:
         return(score,bestMove)
@@ -84,7 +85,7 @@ def paranoid(alpha, beta, depth, turn, oldBoard,currentBoard,oldSnakes,currentSn
       if playerDies:
         return(float('-inf'),prevMove)
       else:
-        if time.time() - timer > 0.38:
+        if time.time() - timer > 0.4:
           score = Board.evaluate(currentBoard,mySnake,currentSnakes)
           if score < bestScore :
             return(score,bestMove)

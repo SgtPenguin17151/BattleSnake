@@ -1,5 +1,6 @@
 import random, Board, moveLogic, time, paranoid
 
+thinkingTime = 0
 
 def choose_move(data: dict) -> str:
   Board.resetGameBoard()
@@ -46,7 +47,7 @@ def choose_move(data: dict) -> str:
       paranoid.timer = time.time()
       start = time.time()
       depth = 2
-      while (time.time() - start) < 0.38:
+      while (time.time() - start) < 0.4:
         result = (paranoid.paranoid(ninf, pinf, depth, "Max", boardCopy,
                                     boardCopy, snakes, snakes, "initial",
                                     mySnake))
@@ -66,4 +67,5 @@ def choose_move(data: dict) -> str:
   print(
     f"{data['game']['id']} MOVE {data['turn']}: {move} picked from all valid options in {possible_moves}"
   )
+  print("We are testing what the thinking time is. Currently it is: ",thinkingTime)
   return move
